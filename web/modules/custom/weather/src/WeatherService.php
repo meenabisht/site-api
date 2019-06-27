@@ -13,7 +13,10 @@ class WeatherService {
     // die();    
     // $step * round($response / $step) ;
     // $response = $response - $step * round($double_value / $step);
-    $response = round($response,0);
+    if ($response->getType() == 'decimal') {
+      $response = round($response,0);
+      return $response;
+    }    
     return $response->getBody()->getContents();
   }
 }
