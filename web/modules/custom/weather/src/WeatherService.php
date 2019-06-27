@@ -10,7 +10,10 @@ class WeatherService {
     $client = new \GuzzleHttp\Client();
     $response = $client->get('https://samples.openweathermap.org/data/2.5/weather?q='.$city.'&appid='.$app);
     // kint($response);
-    // die();   
+    // die();    
+    // $step * round($response / $step) ;
+    // $response = $response - $step * round($double_value / $step);
+    $response = round($response,0);
     return $response->getBody()->getContents();
   }
 }
