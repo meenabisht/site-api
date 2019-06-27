@@ -1,0 +1,7 @@
+clock.form:
+  path: /clock/myform
+  defaults:
+    _title: 'Clock form'
+    _form: '\Drupal\clock\Form\ClockForm'
+  requirements:
+   _permission: 'access content'

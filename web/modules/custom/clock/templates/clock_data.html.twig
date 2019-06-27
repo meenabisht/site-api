@@ -1,0 +1,28 @@
+{# css library which this twig file refers #}
+{{ attach_library('clock/clock') }}
+
+{# city and discription #}
+<div class = "wrapper">
+  <div class="new-background" style="background-image: url('{{ file_url(image) }}');"></div>
+  <div class="hellocity">
+  <img src="modules/custom/clock/images/newsun.png">
+  {{ city }}
+  </div>
+  <div class="description">
+  {{ description }}
+  </div>
+
+  {# clock data #}
+  <div class="mainwrapper">
+    <div class="clock_data">
+      utcOffset<h1> {{ utcOffset }}</h1>
+    </div>
+    <div class="clock_data">
+      dayOfTheWeek<h1> {{ dayOfTheWeek }}</h1>
+    </div>
+    <div class="clock_data">
+      ordinalDate<h1> {{ ordinalDate }}</h1>
+    </div>
+  </div>
+
+</div>

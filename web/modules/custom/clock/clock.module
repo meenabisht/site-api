@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function clock_theme($existing, $type, $theme, $path) {
+  return [
+   'clock' => [
+      'variables' => [
+        'markup' => NULL, 
+        'image'  => NULL,
+        'description' => NULL,
+        'city' => NULL,
+        'utcOffset' =>  NULL,
+        'dayOfTheWeek'  =>  NULL,
+        'ordinalDate' => NULL,
+      ],
+    'template' => 'clock_data',
+    ],
+  ];
+}
