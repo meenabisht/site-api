@@ -1,0 +1,10 @@
+entity.event.collection:
+  title: 'Event Entity Example: Contacts Listing'
+  route_name: entity.content_entity_example_contact.collection
+  description: 'List Contacts'
+  weight: 10
+event.admin.structure.settings:
+  title: Event Settings
+  description: 'Configure Contact entity'
+  route_name:  event.contact_settings
+  parent: system.admin_structure

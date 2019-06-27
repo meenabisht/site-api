@@ -1,0 +1,44 @@
+event.render:
+  path: '/event'
+  defaults:
+    _controller: '\Drupal\event\Controller\EventController::bookRender'
+    _title: 'event'
+  requirements:
+    _permission: 'access content'
+
+event.admin:
+  path: '/admin/structure/book'
+  defaults:
+    _controller: '\Drupal\event\Controller\EventController::adminOverview'
+    _title: 'event'
+  requirements:
+    _permission: 'administer book outlines'
+
+book.settings:
+  path: '/admin/structure/book/settings'
+  defaults:
+    _form: '\Drupal\book\Form\EventSettingsForm'
+    _title: 'event'
+  requirements:
+    _permission: 'administer site configuration'
+
+event.export:
+  path: '/event/export/{type}/{node}'
+  defaults:
+    _controller: '\Drupal\book\Controller\BookController::bookExport'
+  requirements:
+    _permission: 'access printer-friendly version'
+    _entity_access: 'node.view'
+    node: \d+
+
+event.admin_edit:
+  path: '/admin/structure/event/{node}'
+  defaults:
+    _form: 'Drupal\event\Form\BookAdminEditForm'
+    _title: 'Re-order book pages and change titles'
+  requirements:
+    _permission: 'administer event outlines'
+    _entity_access: 'node.view'
+    node: \d+
+
+

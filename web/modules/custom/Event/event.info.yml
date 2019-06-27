@@ -1,0 +1,5 @@
+name: Event Entity 
+type: module
+description: 'Provides EventEntity.'
+package: Event modules
+core: 8.x
