@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function weather_theme($existing, $type, $theme, $path) {
+  return [
+   'weather' => [
+      'variables' => [
+        'markup' => NULL, 
+        'image'  => NULL,
+        'description' => NULL,
+        'city' => NULL,
+        'mintemp' =>  NULL,
+        'maxtemp'  =>  NULL,
+        'pressure' => NULL,
+        'humid'   =>  NULL,
+        'speed'   =>  NULL,
+
+      ],
+    'template' => 'weather_data',
+    ],
+  ];
+}

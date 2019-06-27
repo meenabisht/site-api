@@ -1,0 +1,3 @@
+services:
+  weather.test_service:
+    class: Drupal\weather\WeatherService
